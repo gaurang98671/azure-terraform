@@ -1,3 +1,6 @@
 
 .terraform.lock.hcl
 .terraform/providers/registry.terraform.io/hashicorp/azurerm/2.61.0/windows_amd64/terraform-provider-azurerm_v2.61.0_x5.exe
+*.exe
+Virtual Machine/.terraform/plugin_path
+Resource Group/.terraform/plugin_path
