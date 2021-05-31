@@ -48,6 +48,7 @@ resource "azurerm_virtual_machine" "testing" {
   vm_size = "Standard_DS1_v2"
   location = azurerm_resource_group.testGroup.location
   network_interface_ids = [ azurerm_network_interface.myInterface.id ]
+  delete_os_disk_on_termination = true
 
   storage_os_disk {
     name              = "myosdisk1"
@@ -55,7 +56,11 @@ resource "azurerm_virtual_machine" "testing" {
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
   }
-  
+  os_profile {
+    computer_name  = "hostname"
+    admin_username = "testadmin"
+    admin_password = "Password1234!"
+  }
   storage_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
@@ -65,3 +70,4 @@ resource "azurerm_virtual_machine" "testing" {
   
   
 }
+
