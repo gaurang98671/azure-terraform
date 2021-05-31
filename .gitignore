@@ -6,3 +6,4 @@ Virtual Machine/.terraform/plugin_path
 Resource Group/.terraform/plugin_path
 Virtual Machine/terraform.tfstate.backup
 Multiple VMs/.terraform/plugin_path
+main/.terraform/plugin_path
