@@ -49,7 +49,6 @@ resource "azurerm_virtual_machine" "testing" {
   location = azurerm_resource_group.testGroup.location
   network_interface_ids = [ azurerm_network_interface.myInterface.id ]
   delete_os_disk_on_termination = true
-
   storage_os_disk {
     name              = "myosdisk1"
     caching           = "ReadWrite"
